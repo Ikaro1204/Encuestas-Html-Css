@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de Certificación</title>
+  </head>
+  <body>
+    <h1 id="title">Página Certificación</h1>
+    <p id="description">Formulario de certificación para pruebas en la plataforma</p>
+    <form id="survey-form">
 
+      <label id="name-label" for="name">
+        Ingresa tu nombre:
+        <input required id="name" type="text" placeholder="Ejemplo: Aldo" />
+      </label>
+
+      <label id="email-label" for="email">
+        Ingresa tu email:
+        <input id="email" type="email" required placeholder=".....@mail.com" />
+      </label>
+      <label id="number-label" for="number">
+        Introduce tu edad:
+        <input id="number" type="number" placeholder="18-120" min="18" max="120" required />
+      </label>
+      <label for="dropdown">
+        Elija su Género:
+        <select id="dropdown" required>
+          <option value="">Elegir</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="No binario">No binario</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>¿Trabaja?</legend>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="employment" value="si" checked /> Sí
+          </label>
+          <label>
+            <input type="radio" name="employment" value="no" /> No
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Indique niveles de educación concluidos:</legend>
+        <label class="inline">
+          Preescolar
+          <input type="checkbox" value="1" />
+        </label>
+        <label class="inline">
+          Primaria
+          <input type="checkbox" value="2" />
+        </label>
+        <label class="inline">
+          Secundaria
+          <input type="checkbox" value="3" />
+        </label>
+        <label class="inline">
+          Preparatoria
+          <input type="checkbox" value="4" />
+        </label>
+        <label class="inline">
+          Licenciatura
+          <input type="checkbox" value="5" />
+        </label>
+        <label class="inline">
+          Maestría
+          <input type="checkbox" value="6" />
+        </label>
+      </fieldset>
+      <label>
+        Comentarios:
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Opiniones o cambios etc.."></textarea>
+      </label>
+
+      <button type="submit" id="submit">Enviar</button>
+    </form>
+  </body>
+</html>
